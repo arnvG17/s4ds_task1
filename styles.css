@@ -1,63 +1,95 @@
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: #fff;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+main {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+header, h2 {
+    text-align: center;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 20px;
   background: #444;
   padding: 10px;
+  margin: 0;
 }
+
 .navbar li {
   display: inline-block;
 }
 
-
-.banner {
-  position: relative;
-  text-align: center;
-  color: #555; 
+.navbar a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .products {
   display: flex;
-  gap: 10px;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap;
 }
+
 .card {
   border: 1px solid #ccc;
   padding: 10px;
-  max-height: 10rem;
+  text-align: center;
+  width: 200px;
 }
 
-
-.products .card img {
-  width: 120px;
+.card img {
+  width: 100%;
   height: auto;
-  display: block;
-  margin: 0 auto 10px auto;
   border-radius: 8px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
 
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   background: #222;
   color: white;
   text-align: center;
   padding: 10px;
+  width: 100%;
 }
 
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
 
-input, textarea {
-  display: block;
-  margin: 10px 0;
-  padding: 8px;
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
 }
